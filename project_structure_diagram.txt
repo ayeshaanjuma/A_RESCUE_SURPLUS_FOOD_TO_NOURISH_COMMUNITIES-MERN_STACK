@@ -1,0 +1,47 @@
+food-rescue-platform/
+├── client/                     # Frontend built with Vite + React + Tailwind
+│   ├── public/                 # Public static assets
+│   ├── src/
+│   │   ├── assets/             # Images, icons, and static styling
+│   │   ├── components/         # Reusable UI components
+│   │   │   ├── Map/            # Map components (LiveMap, LocationPicker)
+│   │   │   ├── Navbar.jsx      # Top navigation bar
+│   │   │   └── PrivateRoute.jsx# Route protection component
+│   │   ├── context/            # React Context API (AuthContext)
+│   │   ├── pages/              # Main application views/pages
+│   │   │   ├── Home.jsx        # Landing page
+│   │   │   ├── Login.jsx       # User authentication (Login)
+│   │   │   ├── Register.jsx    # User registration
+│   │   │   ├── Dashboard.jsx   # Main user dashboard
+│   │   │   └── MapDirectory.jsx# Full-screen directory map view
+│   │   ├── utils/              # Frontend helper functions
+│   │   ├── App.jsx             # Main App component & Router setup
+│   │   ├── index.css           # Global CSS & Tailwind imports
+│   │   └── main.jsx            # React initialization and root render
+│   ├── package.json            # Frontend dependencies & scripts
+│   └── vite.config.js          # Vite build configuration
+│
+├── server/                     # Backend built with Node.js + Express
+│   ├── config/                 # Configuration files
+│   │   └── db.js               # MongoDB connection setup
+│   ├── controllers/            # Business logic for API endpoints
+│   │   ├── authController.js   # Logic for login/registration
+│   │   └── donationController.js# Logic for food donations CRUD
+│   ├── middleware/             # Express middleware
+│   │   └── authMiddleware.js   # JWT verification middleware
+│   ├── models/                 # Mongoose database schemas
+│   │   ├── User.js             # User data schema
+│   │   └── Donation.js         # Food donation data schema
+│   ├── routes/                 # Express API routing
+│   │   ├── authRoutes.js       # Endpoints for authentication
+│   │   └── donationRoutes.js   # Endpoints for donation actions
+│   ├── uploads/                # Local directory for temporary image uploads
+│   ├── utils/                  # Backend utility scripts
+│   │   ├── socket.js           # WebSocket connection handling (Socket.io)
+│   │   └── cloudinary.js       # Cloudinary image upload configuration
+│   ├── .env                    # Environment variables (Hidden)
+│   ├── package.json            # Backend dependencies & scripts
+│   └── server.js               # Main backend entry point & server start
+│
+├── package.json                # Root package.json (if using monorepo workspaces)
+└── README.md                   # Project documentation base
